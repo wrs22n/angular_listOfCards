@@ -1,0 +1,38 @@
+<div
+  class="list-wrapper"
+  [ngClass]="{
+    mainProduct: productData.main,
+    pinkBorder: productData.discount === 60
+  }"
+>
+  <div class="description">
+    <div
+      class="discount-block"
+      [ngClass]="{ pinkBackground: productData.discount === 60 }"
+    >
+      <p class="discount">{{ productData.discount }}% off</p>
+    </div>
+  </div>
+  <div class="image">
+    <img [src]="productData.imgUrl" alt="Product" />
+  </div>
+  <div class="main-info">
+    <div class="main-info__main">
+      <div class="main-info__price">
+        <p [ngClass]="{ pink: productData.discount === 60 }">
+          {{ productData.price | currency }}
+        </p>
+      </div>
+      <div class="main-info__shop">
+        <p>{{ productData.shop }}</p>
+      </div>
+    </div>
+    <p>{{ productData.description | charactersLimit }}</p>
+  </div>
+  <hr class="horizontal-line" />
+  <div class="additional-info">
+    <p *ngIf="productData.shipping !== null">{{ productData.shipping }}</p>
+    <p *ngIf="productData.isNew">New</p>
+    <p>{{ productData.discountUntil | date }}</p>
+  </div>
+</div>

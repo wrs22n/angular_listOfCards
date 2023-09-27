@@ -1,0 +1,14 @@
+<div class="products">
+  <div class="products__main">
+    <app-product
+      *ngIf="mainProduct$ | async as mainProduct"
+      [productData]="mainProduct"
+    ></app-product>
+  </div>
+  <div class="products__list">
+    <app-product
+      *ngFor="let product of products"
+      [productData]="product"
+    ></app-product>
+  </div>
+</div>

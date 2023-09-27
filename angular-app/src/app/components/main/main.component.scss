@@ -1,0 +1,30 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 10px auto;
+  @media (min-width: 600px) {
+    width: 500px;
+  }
+  @media (min-width: 1050px) {
+    flex-direction: row;
+    width: 1110px;
+  }
+  @media (min-width: 1350px) {
+    flex-direction: row;
+    width: 1340px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media (min-width: 1050px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 900px;
+    }
+    @media (min-width: 1350px) {
+      width: 1000px;
+    }
+  }
+}
