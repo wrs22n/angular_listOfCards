@@ -2,13 +2,6 @@
   border: 1px solid rgb(255, 147, 29);
   padding: 0 10px;
   margin-top: 10px;
-  @media (min-width: 1050px) {
-    margin: 0 0 10px 10px;
-    width: 185px;
-  }
-  @media (min-width: 1350px) {
-    width: 215px;
-  }
 }
 .horizontal-line {
   border: none;
@@ -37,15 +30,6 @@
   & img {
     width: auto;
     max-height: 75px;
-    @media (min-width: 600px) {
-      max-height: 120px;
-    }
-    @media (min-width: 1050px) {
-      max-height: 75px;
-    }
-    @media (min-width: 1350px) {
-      max-height: 75px;
-    }
   }
 }
 .main-info {
@@ -60,12 +44,6 @@
   }
   & > p {
     width: 50%;
-    @media (min-width: 1050px) {
-      width: 60%;
-    }
-    @media (min-width: 1350px) {
-      width: 50%;
-    }
   }
   &__price {
     display: flex;
@@ -80,35 +58,19 @@
   color: rgb(144, 144, 144);
 }
 .mainProduct {
-  border: 1px solid rgb(255, 102, 102);
   display: flex;
   flex-direction: column;
   padding: 0 10px;
   height: calc(100% - 12px);
-  @media (min-width: 1050px) {
-    width: 205px;
-  }
-  @media (min-width: 1350px) {
-    width: 310px;
-  }
-  .discount-block {
-    background-color: rgb(255, 102, 102);
-  }
   .image {
     display: flex;
     justify-content: center;
     margin-top: -50px;
     flex: 1;
-    @media (min-width: 1050px) {
-      margin-top: 50px;
-    }
     & img {
       width: auto;
       max-height: 120px;
       z-index: -1;
-      @media (min-width: 600px) {
-        max-height: 150px;
-      }
     }
   }
   .main-info {
@@ -117,9 +79,6 @@
     margin-top: 0;
     &__main {
       border-bottom: 1px dotted rgb(139, 139, 139);
-    }
-    &__price {
-      color: rgb(255, 102, 102);
     }
   }
 }
@@ -132,3 +91,14 @@
 .pinkBorder {
   border: 1px solid rgb(248, 171, 184);
 }
+.red {
+  color: rgb(255, 102, 102);
+}
+.redBackground {
+  background-color: rgb(255, 102, 102);
+}
+.redBorder {
+  border: 1px solid rgb(255, 102, 102);
+}
+
+@import "../../../variables.scss";

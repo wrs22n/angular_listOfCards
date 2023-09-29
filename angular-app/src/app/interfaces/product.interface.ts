@@ -1,4 +1,4 @@
-import { IReview } from './review';
+import { IReview } from './review.interface';
 
 export interface IProduct {
   id: number;

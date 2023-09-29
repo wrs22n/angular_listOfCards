@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { data } from '../../assets/data';
+import { IProduct } from '../interfaces/product.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -8,11 +9,13 @@ import { data } from '../../assets/data';
 export class ProductService {
   constructor() {}
 
-  public getMainProduct() {
-    return of(data[0]);
+  public getMainProduct(): Observable<IProduct> {
+    const mainData = data.filter((item) => item.main);
+    return of(mainData[0]);
   }
 
-  public getOtherProducts() {
-    return of(data.slice(1));
+  public getOtherProducts(): Observable<IProduct[]> {
+    const otherData = data.filter((item) => !item.main);
+    return of(otherData);
   }
 }

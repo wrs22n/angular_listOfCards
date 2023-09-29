@@ -4,7 +4,7 @@ export const data = [
     imgUrl:
       'https://cyclingmagazine.ca/wp-content/uploads/2018/10/Krypton_A18_2016_red_ultegra_16_1.jpg',
     price: 28000,
-    discount: 71,
+    discount: 70,
     main: true,
     shop: 'Canada Bike',
     name: 'Argon 18',

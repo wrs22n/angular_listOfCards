@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interfaces/product';
+import { IProduct } from '../../interfaces/product.interface';
 import { CharactersLimitPipe } from '../../pipes/characters-limit.pipe';
 
 @Component({
