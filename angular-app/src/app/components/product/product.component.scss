@@ -1,5 +1,7 @@
+@import "../../../assets/variables.scss";
+
 .list-wrapper {
-  border: 1px solid rgb(255, 147, 29);
+  border: 1px solid $orange-color;
   padding: 0 10px;
   margin-top: 10px;
 }
@@ -13,7 +15,7 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: rgb(255, 147, 29);
+  background-color: $orange-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +50,7 @@
   &__price {
     display: flex;
     flex-direction: row;
-    color: rgb(255, 147, 29);
+    color: $orange-color;
   }
 }
 .additional-info {
@@ -83,22 +85,69 @@
   }
 }
 .pink {
-  color: rgb(248, 171, 184);
+  color: $pink-color;
 }
 .pinkBackground {
-  background-color: rgb(248, 171, 184);
+  background-color: $pink-color;
 }
 .pinkBorder {
-  border: 1px solid rgb(248, 171, 184);
+  border: 1px solid $pink-color;
 }
 .red {
-  color: rgb(255, 102, 102);
+  color: $red-color;
 }
 .redBackground {
-  background-color: rgb(255, 102, 102);
+  background-color: $red-color;
 }
 .redBorder {
-  border: 1px solid rgb(255, 102, 102);
+  border: 1px solid $red-color;
 }
-
-@import "../../../variables.scss";
+@media (min-width: 600px) {
+  .image {
+    & img {
+      max-height: 120px;
+    }
+  }
+  .mainProduct {
+    .image {
+      & img {
+        max-height: 150px;
+      }
+    }
+  }
+}
+@media (min-width: 1050px) {
+  .list-wrapper {
+    margin: 0 0 10px 10px;
+    width: 185px;
+  }
+  .image {
+    & img {
+      max-height: 75px;
+    }
+  }
+  .main-info {
+    & > p {
+      width: 60%;
+    }
+  }
+  .mainProduct {
+    width: 205px;
+    .image {
+      margin-top: 50px;
+    }
+  }
+}
+@media (min-width: 1350px) {
+  .list-wrapper {
+    width: 215px;
+  }
+  .main-info {
+    & > p {
+      width: 50%;
+    }
+  }
+  .mainProduct {
+    width: 310px;
+  }
+}

@@ -2,16 +2,16 @@
   class="list-wrapper"
   [ngClass]="{
     mainProduct: productData.main,
-    pinkBorder: productData.discount === 60,
-    redBorder: productData.discount === 70
+    pinkBorder: productData.discount === DiscountMedium,
+    redBorder: productData.discount === DiscountLarge
   }"
 >
   <div class="description">
     <div
       class="discount-block"
       [ngClass]="{
-        pinkBackground: productData.discount === 60,
-        redBackground: productData.discount === 70
+        pinkBackground: productData.discount === DiscountMedium,
+        redBackground: productData.discount === DiscountLarge
       }"
     >
       <p class="discount">{{ productData.discount }}% off</p>
@@ -25,8 +25,8 @@
       <div class="main-info__price">
         <p
           [ngClass]="{
-            pink: productData.discount === 60,
-            red: productData.discount === 70
+            pink: productData.discount === DiscountMedium,
+            red: productData.discount === DiscountLarge
           }"
         >
           {{ productData.price | currency }}

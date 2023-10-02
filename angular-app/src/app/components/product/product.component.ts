@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { IProduct } from '../../interfaces/product.interface';
-import { CharactersLimitPipe } from '../../pipes/characters-limit.pipe';
 
 @Component({
   selector: 'app-product',
@@ -9,4 +8,7 @@ import { CharactersLimitPipe } from '../../pipes/characters-limit.pipe';
 })
 export class ProductComponent {
   @Input() productData!: IProduct;
+
+  DiscountMedium = 60;
+  DiscountLarge = 70;
 }

@@ -11,9 +11,9 @@ import { Observable, Subscription } from 'rxjs';
 export class MainComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductService) {}
 
-  dataSubscription: Subscription | undefined;
+  dataSubscription: Subscription;
 
-  mainProduct$!: Observable<IProduct>;
+  mainProduct$: Observable<IProduct>;
   products: IProduct[] = [];
 
   ngOnInit() {

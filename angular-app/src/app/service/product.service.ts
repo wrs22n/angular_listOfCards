@@ -10,8 +10,8 @@ export class ProductService {
   constructor() {}
 
   public getMainProduct(): Observable<IProduct> {
-    const mainData = data.filter((item) => item.main);
-    return of(mainData[0]);
+    const mainData = data.find((item) => item.main);
+    return of(mainData);
   }
 
   public getOtherProducts(): Observable<IProduct[]> {
