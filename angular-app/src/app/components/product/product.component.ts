@@ -9,6 +9,6 @@ import { IProduct } from '../../interfaces/product.interface';
 export class ProductComponent {
   @Input() productData!: IProduct;
 
-  DiscountMedium = 60;
-  DiscountLarge = 70;
+  discountMedium = 60;
+  discountLarge = 70;
 }

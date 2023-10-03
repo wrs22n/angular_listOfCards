@@ -59,7 +59,7 @@
   justify-content: space-around;
   color: rgb(144, 144, 144);
 }
-.mainProduct {
+.main-product {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
@@ -108,7 +108,7 @@
       max-height: 120px;
     }
   }
-  .mainProduct {
+  .main-product {
     .image {
       & img {
         max-height: 150px;
@@ -131,7 +131,7 @@
       width: 60%;
     }
   }
-  .mainProduct {
+  .main-product {
     width: 205px;
     .image {
       margin-top: 50px;
@@ -147,7 +147,7 @@
       width: 50%;
     }
   }
-  .mainProduct {
+  .main-product {
     width: 310px;
   }
 }
