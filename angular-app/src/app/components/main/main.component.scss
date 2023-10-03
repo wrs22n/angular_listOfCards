@@ -1,0 +1,38 @@
+@import "../../../assets/variables.scss";
+
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 10px auto;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+@media (min-width: $screen-mobile) {
+  .products {
+    width: 500px;
+  }
+}
+@media (min-width: $screen-tablet) {
+  .products {
+    flex-direction: row;
+    width: 1110px;
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 900px;
+    }
+  }
+}
+@media (min-width: $screen-desktop) {
+  .products {
+    flex-direction: row;
+    width: 1340px;
+    &__list {
+      width: 1000px;
+    }
+  }
+}
